@@ -1,0 +1,42 @@
+# Syntax Coloring For TelnetServer
+#
+# Note: from the Arduino docs:
+#
+#   Datatypes             (KEYWORD1)
+#   Methods and Functions (KEYWORD2)
+#   Instances             (KEYWORD2)
+#   Constants             (LITERAL1)
+#
+
+##
+
+TelnetServer        KEYWORD1
+
+enable              KEYWORD2
+isEnabled           KEYWORD2
+run                 KEYWORD2
+
+##
+
+TelnetClient        KEYWORD1
+
+run                 KEYWORD2
+begin               KEYWORD2
+reset               KEYWORD2
+isConnected         KEYWORD2
+getClient           KEYWORD2
+getStream           KEYWORD2
+processStreamData   KEYWORD2
+
+##
+
+TelnetStreamProxy   KEYWORD1
+
+write               KEYWORD2
+available           KEYWORD2
+read                KEYWORD2
+peek                KEYWORD2
+flush               KEYWORD2
+
+#
+##
