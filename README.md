@@ -5,7 +5,6 @@
 *TelnetServer* is currently experimental and available for ESP8266 only. But feel free to try it out and provide us with some feedback if you get it running on different platforms.
 
 Here's an example session of an actual interface already in use:
-<sub>
 ```
 uli@ankerklause:~$ telnet ig-archas.local
 Trying 192.168.1.30...
@@ -32,9 +31,8 @@ accumulated pump time  30 s
            iterations  0
 ig-archas> 
 ```
-</sub>
 
-There are some nice [examples](#Examples) which will help you to set up your own Telnet-based command line in just a few minutes.
+There are some nice [examples](##Examples) which will help you to set up your own Telnet-based command line in just a few minutes.
 
 ## Design notes
 ### Todos
