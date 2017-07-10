@@ -4,7 +4,7 @@
 
 *TelnetServer* is currently experimental and available for ESP8266 only. But feel free to try it out and provide us with some feedback if you get it running on different platforms.
 
-Here's an example session of an actual interface already in use:
+Here's an example an actual interface in action:
 ```
 uli@ankerklause:~$ telnet ig-archas.local
 Trying 192.168.1.30...
@@ -29,7 +29,7 @@ on-board circuit [1]:   on
 accumulated pump time  30 s
                 state  idle
            iterations  0
-ig-archas> 
+ig-archas>
 ```
 
 There are some nice [examples](##Examples) which will help you to set up your own Telnet-based command line in just a few minutes.
@@ -49,10 +49,10 @@ There are some nice [examples](##Examples) which will help you to set up your ow
 
 In the Arduino IDE, choose Sketch/Include Library/Manage Libraries.  Click the TelnetServer Library from the list, and click the Install button.
 
-## Compatible Hardware:
+## Compatible Hardware
 No hardware dependencies.
 
-## Examples:
+## Examples
 The library includes several examples to help you get started. These are accessible in the Examples/TelnetServer menu off the File menu in the Arduino IDE.
 * **[SimpleTelnetCli](examples/SimpleTelnetCli/SimpleTelnetCli.ino):** A very simple Telnet server implementation which you could just copy past to add your own Telnet command line interface to your project in a few seconds.
 * **[TelnetPinManipulator](examples/TelnetPinManipulator/TelnetPinManipulator.ino):** A more complex version which allows you to remotely manipulate on your board via Telnet.

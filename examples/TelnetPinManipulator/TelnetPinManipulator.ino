@@ -143,11 +143,6 @@ private:
         return;
     }
 
-    /* no argument: read
-     * h : set high
-     * l : set low
-     * 0 .. 255 write analog
-     */
     size_t opidx(0);
     enum {OpHigh = 0, OpLow};
     switch (getOpt(opidx, "h", "l")) {
@@ -269,11 +264,3 @@ void loop()
 {
   server.run();
 }
-#if 0
-/* We use the connected callback to register our service at the mDNS-responder
- */
- void onWiFiConnected(const WiFiEventStationModeConnected& /*event*/)
- {
- }
-auto wiFiConnectHandler = WiFi.onStationModeConnected(&onWiFiConnected);
-#endif
