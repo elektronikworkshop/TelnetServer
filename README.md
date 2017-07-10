@@ -4,7 +4,35 @@
 
 *TelnetServer* is currently experimental and available for ESP8266 only. But feel free to try it out and provide us with some feedback if you get it running on different platforms.
 
-There are some nice [example](# Examples) which will help you to set up your own Telnet-based command line in just a few minutes.
+Here's an example session of an actual interface already in use:
+```bash
+uli@ankerklause:~$ telnet ig-archas.local
+Trying 192.168.1.30...
+Connected to ig-archas.local.
+Escape character is '^]'.
+Welcome to the Intelli-Güss telnet interface!
+Copyright (c) 2017 Elektronik Workshop
+Type "help" for available commands
+Please enter password for "ig-archas": ******
+ig-archas> hist
+----
+history clean
+ig-archas> c.info 1
+on-board circuit [1]:   on
+            pump time   30 s
+           dry thresh  180
+           wet thresh  230
+            soak time    5 m
+     reservoir thresh  150
+----------------------------
+   last read humidity  208
+accumulated pump time  30 s
+                state  idle
+           iterations  0
+ig-archas> 
+```
+
+There are some nice [examples](## Examples) which will help you to set up your own Telnet-based command line in just a few minutes.
 
 ## Design notes
 ### Todos
