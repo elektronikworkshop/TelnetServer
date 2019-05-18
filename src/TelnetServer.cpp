@@ -170,12 +170,24 @@ void
 TelnetServer::run()
 {
   if (m_enabled) {
+#if defined(ARDUINO_ARCH_ESP8266)
     if (m_server.status() == CLOSED) {
+#elif defined(ARDUINO_ARCH_ESP32)
+    if (not m_server) {
+#else
+#error “architecture not supported”
+#endif
       m_server.begin();
       m_server.setNoDelay(true);
     }
   } else {
+#if defined(ARDUINO_ARCH_ESP8266)
     if (m_server.status() != CLOSED) {
+#elif defined(ARDUINO_ARCH_ESP32)
+    if (m_server) {
+#else
+#error “architecture not supported”
+#endif
 
       /* stop clients */
       for (uint8_t i = 0; i < m_numClients; i++) {
@@ -183,6 +195,8 @@ TelnetServer::run()
       }
 
       m_server.stop();
+
+      // esp32: stopAll() ?? does same function exist for 8266, suitable here?
     }
     return;
   }

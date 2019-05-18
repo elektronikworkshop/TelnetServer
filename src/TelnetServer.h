@@ -39,8 +39,10 @@
 */
 #elif defined(ARDUINO_ARCH_ESP8266)
 # include <ESP8266WiFi.h>
+#elif defined(ARDUINO_ARCH_ESP32)
+# include <WiFi.h>
 #else
-# error “This library currenly only supports boards with an ESP8266 processor”
+# error “This library currenly only supports boards with an ESPxx processor”
 #endif
 
 /** A stream proxy which handles telnet logic (negotiation sequences)
