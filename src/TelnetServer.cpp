@@ -175,7 +175,7 @@ TelnetServer::run()
 #elif defined(ARDUINO_ARCH_ESP32)
     if (not m_server) {
 #else
-#error “architecture not supported”
+#error "architecture not supported"
 #endif
       m_server.begin();
       m_server.setNoDelay(true);
@@ -186,7 +186,7 @@ TelnetServer::run()
 #elif defined(ARDUINO_ARCH_ESP32)
     if (m_server) {
 #else
-#error “architecture not supported”
+#error "architecture not supported"
 #endif
 
       /* stop clients */

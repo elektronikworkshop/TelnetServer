@@ -26,8 +26,7 @@
  *
  */
 
-#ifndef _EW_TELNET_SERVER_H_
-#define _EW_TELNET_SERVER_H_
+#pragma once
 
 #if 0 //defined(ARDUINO_ARCH_AVR) || defined(ARDUINO_ARCH_SAM) || defined(ARDUINO_ARCH_SAMD)
   // SAM-specific code
@@ -42,7 +41,7 @@
 #elif defined(ARDUINO_ARCH_ESP32)
 # include <WiFi.h>
 #else
-# error “This library currenly only supports boards with an ESPxx processor”
+# error "This library currenly only supports boards with an ESPxx processor"
 #endif
 
 /** A stream proxy which handles telnet logic (negotiation sequences)
@@ -121,4 +120,3 @@ private:
   bool m_enabled;
 };
 
-#endif  /* _EW_TELNET_SERVER_H_ */
